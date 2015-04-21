@@ -477,7 +477,7 @@ legend span {
     display: none;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 999px) {
   .unless-tablet,
   .hide-on-tablet {
     display: none;
@@ -747,7 +747,7 @@ img.scale-with-grid {
 /* #Tablet (Portrait)
 ================================================== */
 /* Note: Design for a width of 768px */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 768px) and (max-width: 999px) {
   .container {
     width: 768px;
   }
@@ -1250,8 +1250,31 @@ body {
   margin: 0 auto;
   background: #ffffff;
 }
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content {
+    width: 768px;
+    height: 617px;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .main-content {
+    width: 420px;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-content {
+    width: 100%;
+    height: auto;
+  }
+}
 .main-content .panel {
   float: left;
+}
+@media only screen and (max-width: 767px) {
+  .main-content .panel {
+    float: none;
+  }
 }
 .main-content .panel.form {
   width: 480px;
@@ -1261,11 +1284,32 @@ body {
   box-sizing: border-box;
   /* Opera/IE 8+ */
 }
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content .panel.form {
+    width: 370px;
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content .panel.form {
+    width: 100%;
+    padding: 30px 10px;
+  }
+}
 .main-content .panel.preview {
   width: 520px;
   background: #e1e4e7;
   height: 100%;
-  display: table;
+}
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content .panel.preview {
+    width: 398px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content .panel.preview {
+    width: 100%;
+  }
 }
 .main-content h1 {
   font-family: 'Merriweather Sans', sans-serif;
@@ -1274,6 +1318,12 @@ body {
   color: #2c3e50;
   font-weight: 800;
 }
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content h1 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
 .main-content h2 {
   font-family: 'Merriweather', serif;
   font-size: 24px;
@@ -1281,8 +1331,20 @@ body {
   color: #ffffff;
   font-weight: 700;
   background: #2c3e50;
-  padding: 25px;
+  padding: 23px 25px;
   margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content h2 {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content h2 {
+    font-size: 18px;
+    padding: 15px;
+  }
 }
 .main-content form .row {
   margin-bottom: 0;
@@ -1296,6 +1358,17 @@ body {
 }
 .main-content form .row .col:first-child {
   margin-right: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content form .row .col {
+    width: 145px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content form .row .col {
+    float: none;
+    width: 100%;
+  }
 }
 .main-content form .info-title {
   margin-top: 35px;
@@ -1348,10 +1421,27 @@ body {
   margin-top: 30px;
 }
 .main-content .hcard-preview-inner-wrapper {
-  display: table-cell;
-  vertical-align: middle;
   padding: 0 45px;
   margin: 0 auto;
+  position: relative;
+  top: 46%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  /* Safari/Chrome, other WebKit */
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+@media only screen and (max-width: 767px) {
+  .main-content .hcard-preview-inner-wrapper {
+    position: static;
+    top: 0;
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+    padding: 20px 10px;
+  }
 }
 .main-content .hcard-preview-inner-wrapper .hcard-preview-title {
   font-family: 'Merriweather Sans', sans-serif;
@@ -1363,18 +1453,45 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content .hcard-preview-inner-wrapper .hcard-preview-title {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content .hcard-preview-inner-wrapper .hcard-preview-title {
+    text-align: center;
+  }
+}
 .main-content .hcard-preview-inner-wrapper .content-preview {
   background: #ffffff;
   padding: 25px;
   border-bottom: 2px solid #9a9a9a;
 }
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview {
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview {
+    padding: 15px;
+  }
+}
 .main-content .hcard-preview-inner-wrapper .content-preview .row {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   border-bottom: 1px solid #dbe0e2;
   width: 100%;
 }
 .main-content .hcard-preview-inner-wrapper .content-preview .row:last-child {
   margin-bottom: 0;
+}
+@media only screen and (max-width: 767px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview .row {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 }
 .main-content .hcard-preview-inner-wrapper .content-preview div {
   display: inline;
@@ -1390,6 +1507,19 @@ body {
   width: 75px;
   margin-top: 8px;
 }
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview div.title {
+    width: 60px;
+    font-size: 8px;
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview div.title {
+    width: 100%;
+    margin-top: 12px;
+  }
+}
 .main-content .hcard-preview-inner-wrapper .content-preview div.value {
   width: 305px;
   font-family: 'Merriweather', serif;
@@ -1398,7 +1528,30 @@ body {
   color: #000000;
   font-weight: 400;
 }
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview div.value {
+    width: 218px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview div.value {
+    width: 100%;
+    font-size: 14px;
+  }
+}
 .main-content .hcard-preview-inner-wrapper .content-preview div.postcode,
 .main-content .hcard-preview-inner-wrapper .content-preview div.country {
   width: 115px;
+}
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview div.postcode,
+  .main-content .hcard-preview-inner-wrapper .content-preview div.country {
+    width: 78px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-content .hcard-preview-inner-wrapper .content-preview div.hide-on-phone {
+    display: none;
+  }
 }

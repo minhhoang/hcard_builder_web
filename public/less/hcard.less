@@ -45,18 +45,48 @@ body {
 	height: 640px;
 	margin: 0 auto;
 	background: #ffffff;
+	@media @tablet {
+		width: 768px;
+		height: 617px;
+	}
+	@media @phone-landscape {
+		width: 420px;
+		height: auto;
+	}
+	@media @phone-portrait {
+		width: 100%;
+		height: auto;
+	}
+	
 	.panel {
 		float: left;
+		@media @phone {
+			float: none;
+		}
 		&.form {
 			width: 480px;
 			padding: 40px;
 			.box-sizing();
+			@media @tablet {
+				width: 370px;
+				padding: 30px;
+			}
+			@media @phone {
+				width: 100%;
+				padding: 30px 10px;
+			}
 		}
 		&.preview {
 			width: 520px;
 			background: #e1e4e7;
 			height: 100%;
-			display: table;
+			
+			@media @tablet {
+				width: 398px;
+			}
+			@media @phone {
+				width: 100%;
+			}
 		}
 	}
 	h1 {
@@ -65,6 +95,10 @@ body {
 		line-height: 30px; 
 		color: @darkBlue;
 		font-weight: 800;
+		@media @tablet {
+			font-size: 24px;
+			line-height: 26px;
+		}
 	}
 	h2 {
 		font-family: 'Merriweather', serif;
@@ -73,8 +107,16 @@ body {
 		color: #ffffff;
 		font-weight: 700;
 		background: @darkBlue;
-		padding: 25px;
+		padding: 23px 25px;
 		margin-bottom: 0;
+		@media @tablet {
+			font-size: 18px;
+			padding: 15px;
+		}
+		@media @phone {
+			font-size: 18px;
+			padding: 15px;
+		}
 	}
 	form {
 		.row {
@@ -87,6 +129,15 @@ body {
 				float: left;
 				&:first-child {
 					margin-right: 20px;
+				}
+				@media @tablet {
+					width: 145px;
+
+				}
+				@media @phone {
+					float: none;
+					width: 100%;
+
 				}
 			}
 		}
@@ -139,11 +190,18 @@ body {
 		}
 	}
 	.hcard-preview-inner-wrapper {
-		display: table-cell;
-		vertical-align: middle;
 		padding: 0 45px;
 		margin: 0 auto;
-
+		position: relative;
+		top: 46%;
+		transform: translateY(-50%);
+		@media @phone {
+			position: static;
+			top: 0;
+			transform: translateY(0%);
+			padding: 20px 10px;
+		}
+		.box-sizing();
 		.hcard-preview-title {
 			font-family: 'Merriweather Sans', sans-serif;
 			font-size: 16px;
@@ -153,16 +211,33 @@ body {
 			text-align: right;
 			text-transform: uppercase;
 			margin-bottom: 20px;
+			@media @tablet {
+				font-size: 12px;
+				margin-bottom: 14px;
+			}
+			@media @phone {
+				text-align: center;
+			}
 		}
 		.content-preview {
 			background: #ffffff;
 			padding: 25px;
 			border-bottom: 2px solid #9a9a9a;
+			@media @tablet {
+				padding: 15px;
+			}
+			@media @phone {
+				padding: 15px;
+			}
 			.row {
-				margin-bottom: 10px;
+				margin-bottom: 8px;
 				border-bottom: 1px solid #dbe0e2;
 				width: 100%;
 				&:last-child {
+					margin-bottom: 0;
+				}
+				@media @phone {
+					border-bottom: none;
 					margin-bottom: 0;
 				}
 			}
@@ -178,6 +253,15 @@ body {
 					text-transform: uppercase;
 					width: 75px;
 					margin-top: 8px;
+					@media @tablet {
+						width: 60px;
+						font-size: 8px;
+						margin-top: 5px;
+					}
+					@media @phone {
+						width: 100%;
+						margin-top: 12px;
+					}
 				}
 				&.value {
 					width: 305px;
@@ -186,9 +270,25 @@ body {
 					line-height: 22px;
 					color: #000000;
 					font-weight: 400;	
+					@media @tablet {
+						width: 218px;
+						font-size: 12px;
+					}
+					@media @phone {
+						width: 100%;
+						font-size: 14px;
+					}
 				}
 				&.postcode, &.country {
 					width: 115px;
+					@media @tablet {
+						width: 78px;
+					}
+				}
+				&.hide-on-phone {
+					@media @phone {
+						display: none;
+					}
 				}
 			}
 		}

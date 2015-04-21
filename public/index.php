@@ -93,7 +93,7 @@
 						<div class="title">Address</div><div class="value address">1 Darling Island Road</div>
 					</div>
 					<div class="row">
-						<div class="title">&nbsp;</div><div class="value suburb">Pyrmont, NSW</div>
+						<div class="title hide-on-phone">&nbsp;</div><div class="value suburb">Pyrmont, NSW</div>
 					</div>
 					<div class="row">
 						<div class="title">Postcode</div><div class="value postcode">2009</div>
