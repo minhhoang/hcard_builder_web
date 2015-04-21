@@ -1527,6 +1527,7 @@ body {
   line-height: 22px;
   color: #000000;
   font-weight: 400;
+  overflow: hidden;
 }
 @media only screen and (min-width: 768px) and (max-width: 999px) {
   .main-content .hcard-preview-inner-wrapper .content-preview div.value {
@@ -1539,6 +1540,9 @@ body {
     width: 100%;
     font-size: 14px;
   }
+}
+.main-content .hcard-preview-inner-wrapper .content-preview div.value .comma {
+  display: none;
 }
 .main-content .hcard-preview-inner-wrapper .content-preview div.postcode,
 .main-content .hcard-preview-inner-wrapper .content-preview div.country {
