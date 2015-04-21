@@ -1,0 +1,196 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+@import "skeleton/component/reset";
+@import "skeleton/component/typography";
+@import "skeleton/component/buttons";
+@import "skeleton/component/forms";
+@import "skeleton/component/grid";
+
+/* Default */
+@displayFont: serif;
+@darkBlue: #2c3e50;
+
+.box-sizing() {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+body,html{
+  height: 100%;
+}
+body {
+    background: #cccccc;
+    -webkit-font-smoothing: antialiased;
+}
+.site-wrapper {
+	font-family: 'Merriweather', serif;
+	font-size: 16px;
+	line-height: 32px;
+	color: #000000;
+}
+.main-content {
+	width: 1000px;
+	height: 640px;
+	margin: 0 auto;
+	background: #ffffff;
+	.panel {
+		float: left;
+		&.form {
+			width: 480px;
+			padding: 40px;
+			.box-sizing();
+		}
+		&.preview {
+			width: 520px;
+			background: #e1e4e7;
+			height: 100%;
+			display: table;
+		}
+	}
+	h1 {
+		font-family: 'Merriweather Sans', sans-serif;
+		font-size: 28px;
+		line-height: 30px; 
+		color: @darkBlue;
+		font-weight: 800;
+	}
+	h2 {
+		font-family: 'Merriweather', serif;
+		font-size: 24px;
+		line-height: 24px; 
+		color: #ffffff;
+		font-weight: 700;
+		background: @darkBlue;
+		padding: 25px;
+		margin-bottom: 0;
+	}
+	form {
+		.row {
+			margin-bottom: 0;
+			&:last-child {
+				text-align: center;
+			}
+			.col {
+				width: 190px;
+				float: left;
+				&:first-child {
+					margin-right: 20px;
+				}
+			}
+		}
+		.info-title {
+			margin-top: 35px;
+			font-family: 'Merriweather Sans', sans-serif;
+			font-size: 10px;
+			line-height: 12px;
+			font-weight: 700;
+			color: #b0b8bc;
+			text-transform: uppercase;
+			border-bottom: 1px solid #c3c4c3;
+			padding-bottom: 2px;
+			margin-bottom: 12px;
+		}
+		label {
+			font-family: 'Merriweather Sans', sans-serif;
+			font-size: 12px;
+			line-height: 14px;
+			font-weight: 400;
+			color: @darkBlue;
+			text-transform: uppercase;
+			margin: 12px 0 2px 0;
+		}
+		input {
+			width: 100%;
+			.box-sizing();
+			height: 35px;
+			font-family: 'Merriweather', serif;
+			font-size: 16px;
+			color: #000000;
+			padding: 0 8px;
+			.border-radius();
+			margin-bottom: 0;
+		}
+		button {
+			width: 190px;
+			height: 42px;
+			.border-radius();
+			background: #3498db;
+			font-family: 'Merriweather', serif;
+			font-weight: 400;
+			color: #ffffff;
+			font-size: 18px;
+			line-height: 15px;
+			border: none;
+			text-shadow: none;
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+	}
+	.hcard-preview-inner-wrapper {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 45px;
+		margin: 0 auto;
+
+		.hcard-preview-title {
+			font-family: 'Merriweather Sans', sans-serif;
+			font-size: 16px;
+			line-height: 16px; 
+			color: #95a5a6;
+			font-weight: 400;
+			text-align: right;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+		.content-preview {
+			background: #ffffff;
+			padding: 25px;
+			border-bottom: 2px solid #9a9a9a;
+			.row {
+				margin-bottom: 10px;
+				border-bottom: 1px solid #dbe0e2;
+				width: 100%;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			div {
+				display: inline;
+				float: left;
+				&.title {
+					font-family: 'Merriweather Sans', sans-serif;
+					font-size: 10px;
+					line-height: 12px;
+					color: #34495e;
+					font-weight: 400;
+					text-transform: uppercase;
+					width: 75px;
+					margin-top: 8px;
+				}
+				&.value {
+					width: 305px;
+					font-family: 'Merriweather', serif;
+					font-size: 16px;
+					line-height: 22px;
+					color: #000000;
+					font-weight: 400;	
+				}
+				&.postcode, &.country {
+					width: 115px;
+				}
+			}
+		}
+	}
+}

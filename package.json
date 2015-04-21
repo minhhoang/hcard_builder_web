@@ -1,0 +1,21 @@
+{
+  "name": "web",
+  "description": "Hcard Builder",
+  "version": "1.0.0",
+  "author": {
+    "name": "Nguyen Quang Minh Hoang"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-install": "^0.4.0",
+    "gulp-less": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.4"
+  }
+}
