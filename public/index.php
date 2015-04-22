@@ -10,9 +10,12 @@
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0"/>
     <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800|Merriweather' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/hcard.css">
+    <!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="css/ie8.css">
+	<![endif]-->
 </head>
 
-<div class="site-wrapper" ng-app="">
+<div class="site-wrapper" ng-app="" id="ng-app" class="ng-app">
     <div class="main-content clearfix">
 		<div class="panel form">
 			<h1>hCard Builder</h1>
@@ -105,6 +108,9 @@
     </div>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<!--[if IE 8]>
+	<script type="text/javascript" src="https://code.angularjs.org/1.2.0/angular.min.js"></script>
+<![endif]-->
 <script type="text/javascript" src="js/compiled.js"></script>
 </body>
 </html>

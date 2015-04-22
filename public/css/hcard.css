@@ -1398,6 +1398,7 @@ body {
   box-sizing: border-box;
   /* Opera/IE 8+ */
   height: 35px;
+  line-height: 35px;
   font-family: 'Merriweather', serif;
   font-size: 16px;
   color: #000000;
@@ -1406,6 +1407,7 @@ body {
   margin-bottom: 0;
 }
 .main-content form button {
+  display: block;
   width: 190px;
   height: 42px;
   border-radius: 5px;
